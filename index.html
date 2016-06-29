@@ -83,6 +83,40 @@ class: center, middle
 
 ---
 
+# Branching
+
+![](https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/hero.svg)
+
+- `git branch` to list branches
+- `git branch feature-foobar` to create a new branch
+- `git checkout feature-foobar` to select a branch
+- `git branch -d feature-foobar` to delete a branch
+
+???
+
+- In gitflow, everything should be done in a branch with a pull request, no matter how small.
+- Branches are cheap and not designed to last a long time
+- `git branch feature-foobar` does not check out the branch, because branches are just pointers
+
+---
+
+## Branches are just pointers
+
+![](https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/02.svg)
+
+---
+
+## Branches are just pointers
+
+![](https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/03.svg)
+
+???
+
+- In `hg`, this would create a new commit. In `git` it creates a marker
+- We still need to checkout the branch and create some commits on it
+
+---
+
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
