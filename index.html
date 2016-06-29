@@ -205,6 +205,63 @@ class: center, middle
 
 ---
 
+# Rewriting history
+
+- Amending mistakes in the last commit
+- Incorporating dev commits into feature branch
+- Tidying up a feature branch for a pull request
+
+#### Only rewrite commits that haven't been pushed!
+
+- Rewriting changes the internal tree structure and will break the repository of anyone who pulled between the original push and the rewritten push.
+
+---
+
+## `git commit --amend`
+
+- Squash my most recent commit together with the current stage
+- Asks for a commit message
+- Usage:
+	- Forgotten files
+	- Mis-typed commit messages
+
+---
+
+## Rebasing
+
+- Moving the base commit of a branch (to maintain a linear project history)
+
+![](https://www.atlassian.com/git/images/tutorials/getting-started/rewriting-history/02.svg)
+
+---
+
+## Interactive rebasing
+
+- Complete freedom over project history
+- Commit a messy history as you work, rewrite it to a clean history later
+- To everybody else, it will look like the entire feature was developed in a single series of well-planned commits
+
+---
+
+## Interactive rebasing
+
+```
+pick 32618c4 Implement feature
+pick 62eed47 Fix something from the previous commit
+```
+
+...
+
+```
+pick 32618c4 Implement feature
+squash 62eed47 Fix something from the previous commit
+```
+
+???
+- Demo
+
+---
+
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
