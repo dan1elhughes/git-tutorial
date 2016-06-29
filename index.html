@@ -117,6 +117,54 @@ class: center, middle
 
 ---
 
+# Merging
+
+- Standard merge
+- Fast-forward merge
+
+---
+
+## Standard merge
+
+![](http://pic002.cnblogs.com/images/2012/407713/2012081915204638.png)
+
+???
+
+- When to use: When merging pull requests, a "symbolic" merge.
+
+---
+
+## Fast-forward merge
+
+![](http://pic002.cnblogs.com/images/2012/407713/2012081915245240.png)
+
+- Because branches are pointers, we can simply move the pointer
+
+???
+
+- When to use: When integrating someone elses work on the same feature
+
+---
+
+# Merging
+
+- Git will decide the type of merge automatically; if there's no point creating a merge commit, it won't
+- It's possible to force a merge commit with `--no-ff`:
+
+![](http://www.bogotobogo.com/cplusplus/images/Git/Fast_Forward_Merge/FastForwardMergeWith_no_ff.png)
+
+---
+
+## Fixing merge conflicts
+
+- See "Building a commit" above!
+- The exact same edit, stage, commit workflow:
+	- Edit the conflicted file
+	- `git add file`
+	- `git commit 'Resolve merge conflicts'`
+
+---
+
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
