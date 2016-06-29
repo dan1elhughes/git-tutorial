@@ -4,23 +4,40 @@
     <title>Title</title>
     <meta charset="utf-8">
 	<style type="text/css">
-      @import url(https://fonts.googleapis.com/css?family=Roboto);
-      @import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+      @import url(https://fonts.googleapis.com/css?family=Lato|Inconsolata);
+
+	  body {
+		  background: #34495e;
+	  }
 
       body, h1, h2, h3 {
-		  font-family: 'Roboto';
+		  font-family: 'Lato';
 		  color: #212121
 	  }
 
       h1, h2, h3 {
 		  font-weight: normal;
+		  margin-top: 0.25em;
 	  }
 
-      .remark-inline-code {
-		  font-family: 'Roboto Mono';
-		  background: #ddd;
-		  padding-left: 0.25em;
-		  padding-right: 0.25em;
+	  h1 {
+		  border-bottom: 1px solid #eee;
+	  }
+
+      .remark-inline-code, .remark-code {
+		  font-family: 'Inconsolata';
+		  background: #eee;
+		  color: #000;
+		  padding-left: 0.1em;
+		  padding-right: 0.1em;
+	  }
+
+	  .remark-code {
+		  display: block;
+	  }
+
+	  ul li {
+		 margin: 0.5em 0;
 	  }
 
     </style>
