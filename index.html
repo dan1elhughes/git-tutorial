@@ -192,10 +192,10 @@ class: center, middle
 
 - `git pull` is actually *two* commands:
 	- `git fetch` to update our cache of the remote branch
-	- `git merge` to merge remote branch into our own (**might make a merge commit**)
+	- `git merge` to merge remote branch into our own
 
-- `git push` sends our commits to the remote and triggers it to perform a merge.
-	- (**Fails if it needs a merge commit**)
+- `git push` sends our commits to the remote and triggers it to perform a fast-forward merge.
+	- Fails if it needs a merge commit
 
 ???
 
@@ -203,9 +203,23 @@ class: center, middle
 - We don't want merge commits on push, as the server can't work out conflicts
 ---
 
+## Fetching with `git pull`
+
+- This gives us a non-meaningful merge commit
+
+![](http://code4reference.com/wp-content/uploads/2013/06/git-pull.jpg)
+
+---
+
 ## Fetching with `git pull --rebase`
 
-![](https://i.stack.imgur.com/5yRg3.png)
+- This gives us a linear history
+
+![](http://code4reference.com/wp-content/uploads/2013/06/git-pull-rebase.jpg)
+
+---
+
+## Fetching with `git pull --rebase`
 
 - “I want to put my changes on top of what anybody else has done.”
 - This is so common that there's a built-in setting to make it default:
