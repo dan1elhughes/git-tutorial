@@ -262,6 +262,39 @@ squash 62eed47 Fix something from the previous commit
 
 ---
 
+# Cheat sheet
+
+#### Adding files
+- `git add <file>`
+- `git commit`
+
+#### Creating a feature branch
+
+- `git branch feature-foobar`
+- `git checkout feature-foobar`
+
+#### Merging
+
+- `git merge mybranch otherbranch`
+
+#### Collaborating
+
+- `git pull --rebase`
+- `git push`
+
+---
+
+# Cheat sheet
+
+#### Fixing mistakes
+
+- `git commit --amend`
+
+#### Preparing a pull request
+
+- `git rebase feature-foobar dev` OR
+- `git rebase -i feature-foobar dev` if there are things to fix
+
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
