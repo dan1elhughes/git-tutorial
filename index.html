@@ -165,6 +165,46 @@ class: center, middle
 
 ---
 
+# Collaborating (`pull`)
+
+- `git pull` is actually *two* commands:
+	- `git fetch` to update our cache of the remote branch
+	- `git merge` to merge remote branch into our own (**might make a merge commit**)
+
+- `git push` sends our commits to the remote and triggers it to perform a merge.
+	- (**Fails if it needs a merge commit**)
+
+???
+
+- We don't want merge commits on pull, as it's not a logical merge of two features.
+- We don't want merge commits on push, as the server can't work out conflicts
+---
+
+## Fetching with `git pull --rebase`
+
+![](https://i.stack.imgur.com/5yRg3.png)
+
+- “I want to put my changes on top of what anybody else has done.”
+- This is so common that there's a built in setting to make it default:
+- `git config --global branch.autosetuprebase always`
+
+---
+
+## Pushing with `git push`
+
+- Opposite of `git fetch`, the server runs `git merge` for us
+- **Must** be a fast-forward merge on the server side
+
+--
+- .. Except if you ask it nicely with `--force`. This can **delete** commits.
+- Only allowed on feature branches, and still need to be careful
+
+???
+
+- Can delete commits because you are overwriting the entire remote, even if someone else pushed commits after you started work
+
+---
+
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
