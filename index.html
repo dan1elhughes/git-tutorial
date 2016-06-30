@@ -335,7 +335,8 @@ squash 62eed47 Fix something from the previous commit
 
 #### Merging
 
-- `git merge mybranch otherbranch`
+- `git checkout mybranch`
+- `git merge otherbranch`
 
 #### Collaborating
 
@@ -352,8 +353,9 @@ squash 62eed47 Fix something from the previous commit
 
 #### Preparing a pull request
 
-- `git rebase feature-foobar dev` OR
-- `git rebase -i feature-foobar dev` if there are things to fix
+- `git checkout feature-foobar`
+- `git rebase dev` OR
+- `git rebase -i dev` if there are things to fix
 
 ---
 
