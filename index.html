@@ -217,6 +217,11 @@ class: center, middle
 
 ![](http://code4reference.com/wp-content/uploads/2013/06/git-pull.jpg)
 
+???
+
+- Creates a new commit from the most recent local commit combined with the most recent remote commit
+- Having branching history on a single branch makes it harder to trace back bugs
+
 ---
 
 ## Fetching with `git pull --rebase`
@@ -224,6 +229,10 @@ class: center, middle
 - This gives us a linear history
 
 ![](http://code4reference.com/wp-content/uploads/2013/06/git-pull-rebase.jpg)
+
+???
+
+- We can now step back through the commits one at a time continuously to track down the source of a bug
 
 ---
 
@@ -312,13 +321,31 @@ squash 62eed47 Fix something from the previous commit
 ```
 
 ???
-- Demo
+
+- Demo?
+- Have talked about:
+	- Building a commit
+	- Branching
+	- Merging
+	- Collaborating
+	- Rewriting history
+- The result of all of that.. (next slide)
 
 ---
 
 # The result
 
 ![](http://www.bitsnbites.eu/wp-content/uploads/2015/12/1-nonlinear-vs-linear.png)
+
+???
+
+- Every commit is atomic
+- Every commit is meaningful
+- Every commit on dev is a new feature
+- Easy to step back through the history and find the source of bugs
+	- There's actually an automated tool for this, `git bisect`
+- Rebasing isn't scary, but needs practise
+- Interactive rebasing is kinda scary but highly recommended for creating a clean history
 
 ---
 
